@@ -5,6 +5,7 @@
         padding: 100px 24px 120px;
         background: linear-gradient(180deg, #2d2320 0%, #1a1412 100%);
         position: relative;
+        overflow: hidden;
     }
 
     .hero::after {
@@ -15,6 +16,99 @@
         right: 0;
         height: 1px;
         background: linear-gradient(90deg, transparent, #762507, transparent);
+        z-index: 2;
+    }
+
+    /* Coffee Steam Animation */
+    .steam-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .steam {
+        position: absolute;
+        bottom: -20px;
+        width: 40px;
+        height: 80px;
+        background: radial-gradient(ellipse at center, rgba(245, 230, 211, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        filter: blur(8px);
+        animation: steam-rise 8s ease-in-out infinite;
+        opacity: 0;
+    }
+
+    .steam:nth-child(1) {
+        left: 10%;
+        animation-delay: 0s;
+        animation-duration: 9s;
+    }
+
+    .steam:nth-child(2) {
+        left: 25%;
+        animation-delay: 2s;
+        animation-duration: 7s;
+        width: 50px;
+        height: 100px;
+    }
+
+    .steam:nth-child(3) {
+        left: 45%;
+        animation-delay: 1s;
+        animation-duration: 8s;
+    }
+
+    .steam:nth-child(4) {
+        left: 55%;
+        animation-delay: 3.5s;
+        animation-duration: 10s;
+        width: 35px;
+        height: 70px;
+    }
+
+    .steam:nth-child(5) {
+        left: 70%;
+        animation-delay: 0.5s;
+        animation-duration: 7.5s;
+        width: 45px;
+        height: 90px;
+    }
+
+    .steam:nth-child(6) {
+        left: 85%;
+        animation-delay: 2.5s;
+        animation-duration: 8.5s;
+    }
+
+    @keyframes steam-rise {
+        0% {
+            opacity: 0;
+            transform: translateY(0) scaleX(1);
+        }
+        15% {
+            opacity: 0.6;
+        }
+        50% {
+            opacity: 0.4;
+            transform: translateY(-150px) scaleX(1.2);
+        }
+        85% {
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-350px) scaleX(1.5);
+        }
+    }
+
+    .hero .container {
+        position: relative;
+        z-index: 1;
     }
 
     .hero-eyebrow {
@@ -136,6 +230,14 @@
 
 {{ define "main" }}
 <section class="hero">
+    <div class="steam-container">
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+    </div>
     <div class="container">
         <p class="hero-eyebrow">Premium Coffee Experience</p>
         <h1>Coffee, Perfected.<br>Always On Tap.</h1>
