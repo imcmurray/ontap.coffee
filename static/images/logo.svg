@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="230" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+  <!-- ON TAP Coffee Logo -->
+
+  <!-- "ON" text -->
+  <text x="100" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#1a1a1a">ON</text>
+
+  <!-- "TAP" text -->
+  <text x="100" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#1a1a1a">TAP</text>
+
+  <!-- Coffee drop -->
+  <path d="M100,80 C97,88 94,96 94,102 C94,108 96,112 100,112 C104,112 106,108 106,102 C106,96 103,88 100,80 Z" fill="#4c1907"/>
+
+  <!-- Coffee cup -->
+  <g stroke="#1a1a1a" stroke-width="5" fill="none">
+    <!-- Cup body -->
+    <path d="M45,115 L55,175 C58,190 75,195 100,195 C125,195 142,190 145,175 L155,115" stroke-linecap="round"/>
+    <!-- Cup rim -->
+    <line x1="40" y1="115" x2="160" y2="115" stroke-linecap="round"/>
+    <!-- Cup base -->
+    <line x1="65" y1="195" x2="135" y2="195" stroke-linecap="round"/>
+  </g>
+
+  <!-- Cup handle -->
+  <path d="M155,125 C175,125 185,140 185,155 C185,170 175,180 155,180" stroke="#1a1a1a" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- Coffee liquid wave inside cup -->
+  <path d="M60,150 C70,145 85,160 100,155 C115,150 130,165 140,155 L138,175 C135,185 120,190 100,190 C80,190 65,185 62,175 Z" fill="#4c1907"/>
+
+  <!-- "Coffee" text -->
+  <text x="100" y="220" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-weight="bold" font-size="30" fill="#4c1907">Coffee</text>
+</svg>

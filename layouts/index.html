@@ -1,0 +1,95 @@
+{{ define "head" }}
+<style>
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f5e6d3 0%, #faf8f5 100%);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        color: #4c1907;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .features {
+        padding: 60px 20px;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .feature h3 {
+        color: #4c1907;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .feature p {
+        color: #666;
+    }
+
+    .content-section {
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .content-section h2 {
+        color: #4c1907;
+        margin-bottom: 20px;
+    }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to OnTap Coffee</h1>
+        <p>{{ .Site.Params.description }}</p>
+    </div>
+</section>
+
+<section class="features">
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Fresh Brewed</h3>
+            <p>Our coffee is always freshly brewed and ready to serve, straight from the tap.</p>
+        </div>
+        <div class="feature">
+            <h3>Premium Quality</h3>
+            <p>We source only the finest beans to deliver an exceptional coffee experience.</p>
+        </div>
+        <div class="feature">
+            <h3>On Demand</h3>
+            <p>Coffee on tap means you get your perfect cup instantly, every time.</p>
+        </div>
+    </div>
+</section>
+
+{{ with .Content }}
+<section class="content-section">
+    {{ . }}
+</section>
+{{ end }}
+{{ end }}

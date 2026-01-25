@@ -1,0 +1,13 @@
+baseURL = 'https://ontap.coffee/'
+languageCode = 'en-us'
+title = 'OnTap Coffee'
+
+[params]
+  description = 'OnTap Coffee - Premium coffee on tap'
+  logo = '/images/logo.svg'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
