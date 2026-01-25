@@ -2,14 +2,35 @@
 <style>
     .hero {
         text-align: center;
-        padding: 80px 20px;
-        background: linear-gradient(135deg, #2d2320 0%, #1a1412 100%);
+        padding: 100px 24px 120px;
+        background: linear-gradient(180deg, #2d2320 0%, #1a1412 100%);
+        position: relative;
+    }
+
+    .hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #762507, transparent);
+    }
+
+    .hero-eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.875rem;
+        color: #762507;
+        margin-bottom: 16px;
+        font-weight: 600;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 5vw, 4rem);
         color: #f5e6d3;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+        line-height: 1.1;
     }
 
     .hero p {
@@ -17,48 +38,98 @@
         color: #a89080;
         max-width: 600px;
         margin: 0 auto;
+        line-height: 1.8;
     }
 
     .features {
-        padding: 60px 20px;
+        padding: 100px 24px;
+    }
+
+    .features-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .features-header h2 {
+        font-size: 2.25rem;
+        color: #f5e6d3;
+        margin-bottom: 16px;
+    }
+
+    .features-header p {
+        color: #a89080;
+        font-size: 1.125rem;
     }
 
     .features-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
-        max-width: 1000px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .feature {
         text-align: center;
-        padding: 30px;
-        background: #2d2320;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        border-top: 3px solid #762507;
+        padding: 48px 32px;
+        background: linear-gradient(180deg, #2d2320 0%, #252019 100%);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        border: 1px solid rgba(118, 37, 7, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .feature-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 24px;
+        background: linear-gradient(135deg, #762507, #4c1907);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
     }
 
     .feature h3 {
-        color: #e8c9a0;
-        margin-bottom: 15px;
+        color: #f5e6d3;
+        margin-bottom: 16px;
         font-size: 1.5rem;
     }
 
     .feature p {
         color: #a89080;
+        line-height: 1.7;
     }
 
     .content-section {
-        padding: 40px 20px;
+        padding: 60px 24px;
         max-width: 800px;
         margin: 0 auto;
     }
 
     .content-section h2 {
-        color: #e8c9a0;
-        margin-bottom: 20px;
+        color: #f5e6d3;
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 60px 20px 80px;
+        }
+
+        .features {
+            padding: 60px 20px;
+        }
+
+        .feature {
+            padding: 32px 24px;
+        }
     }
 </style>
 {{ end }}
@@ -66,24 +137,32 @@
 {{ define "main" }}
 <section class="hero">
     <div class="container">
-        <h1>Welcome to OnTap Coffee</h1>
-        <p>{{ .Site.Params.description }}</p>
+        <p class="hero-eyebrow">Premium Coffee Experience</p>
+        <h1>Coffee, Perfected.<br>Always On Tap.</h1>
+        <p>Experience the future of coffee service. Fresh, premium quality coffee dispensed on demand, exactly how you like it.</p>
     </div>
 </section>
 
 <section class="features">
+    <div class="features-header">
+        <h2>Why OnTap Coffee?</h2>
+        <p>The perfect cup, every single time.</p>
+    </div>
     <div class="features-grid">
         <div class="feature">
+            <div class="feature-icon">&#9749;</div>
             <h3>Fresh Brewed</h3>
-            <p>Our coffee is always freshly brewed and ready to serve, straight from the tap.</p>
+            <p>Our coffee is always freshly brewed and ready to serve, straight from the tap. No waiting, no stale pots.</p>
         </div>
         <div class="feature">
+            <div class="feature-icon">&#10022;</div>
             <h3>Premium Quality</h3>
-            <p>We source only the finest beans to deliver an exceptional coffee experience.</p>
+            <p>We source only the finest beans from trusted roasters to deliver an exceptional coffee experience.</p>
         </div>
         <div class="feature">
+            <div class="feature-icon">&#9201;</div>
             <h3>On Demand</h3>
-            <p>Coffee on tap means you get your perfect cup instantly, every time.</p>
+            <p>Coffee on tap means you get your perfect cup instantly, every time. Fast, efficient, delicious.</p>
         </div>
     </div>
 </section>
