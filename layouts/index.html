@@ -676,8 +676,9 @@
             <div class="contact-form-wrapper">
                 <h3>Event Inquiry</h3>
                 <p>Planning a wedding, party, or corporate event?</p>
-                <form action="https://formspree.io/f/need@ontap.coffee" method="POST">
+                <form action="{{ getenv "HUGO_FORMSPREE_ENDPOINT" }}" method="POST">
                     <input type="hidden" name="_subject" value="Event Inquiry from OnTap.Coffee">
+                    <input type="hidden" name="form_type" value="event">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="event-name">Name</label>
@@ -726,8 +727,9 @@
             <div class="contact-form-wrapper">
                 <h3>Business Inquiry</h3>
                 <p>Want premium coffee on tap at your office?</p>
-                <form action="https://formspree.io/f/need@ontap.coffee" method="POST">
+                <form action="{{ getenv "HUGO_FORMSPREE_ENDPOINT" }}" method="POST">
                     <input type="hidden" name="_subject" value="Business Inquiry from OnTap.Coffee">
+                    <input type="hidden" name="form_type" value="business">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="company-name">Company Name</label>
