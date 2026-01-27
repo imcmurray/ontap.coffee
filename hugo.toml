@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'OnTap Coffee'
 
 [params]
-  description = 'On Tap Coffee Co. - Utah''s mobile cold brew and nitro coffee service for events and offices. Locally roasted, keg-fresh, unforgettable.'
+  description = "On Tap Coffee Co. - Utah's mobile cold brew and nitro coffee service for events and offices. Locally roasted, keg-fresh, unforgettable."
   logo = '/images/logo.svg'
 
 [menu]
