@@ -1,3 +1,1 @@
-this-is-bogus-data-for-testing-purposes-only
-not-a-real-verification-token
-deadbeef-cafe-1234-5678-abcdef012345
+olFJZ6E3bxR1XEgLcNUTLPBk6B6o_fBtt3gvSZ6uONo
